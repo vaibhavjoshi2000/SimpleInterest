@@ -20,7 +20,7 @@ namespace SimpleInterest.Controllers
         public ActionResult CalculateSimpleInterest(SimpleInterestModel model)
         {
             // Validate the model
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid)//It is used to validate Data & handle the errors which is inside Models class.
             {
                 // Return the same view with validation errors
                 return View("DisplaySimpleInterest", model);
