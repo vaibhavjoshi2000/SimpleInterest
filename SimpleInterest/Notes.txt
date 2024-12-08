@@ -1,0 +1,26 @@
+﻿
+Ques. While running the application how default route automatically set to SimpleInterest/CalculateSimpleInterest?
+Sol->
+URL Construction:
+
+In the Razor view, Html.BeginForm generates the correct action URL (/SimpleInterest/CalculateSimpleInterest) based on the routing rules.
+Route Matching:
+
+When the form is submitted, ASP.NET MVC matches the URL to the correct controller (SimpleInterestController) and action method (CalculateSimpleInterest).
+--------------------*--------------------------------------
+Ques. Why we use Html.BeginForm instead of form tag?
+Sol->
+While plain HTML works fine for basic forms, Html.BeginForm provides:
+
+Integration with MVC features (routing, model binding, validation).
+Cleaner, more maintainable code.
+Better adaptability to changes in routing or application structure.
+In an MVC project, using Html.BeginForm is the preferred practice for forms because it aligns with the MVC framework’s philosophy of convention over configuration and reduces the risk of errors.
+--------------------*--------------------------------------
+Ques. What @ refers?
+Sol-> For Accessing the C# code inside view we use it.
+
+
+
+
+

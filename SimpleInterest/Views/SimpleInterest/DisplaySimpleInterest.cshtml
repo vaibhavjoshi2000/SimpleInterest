@@ -1,0 +1,38 @@
+﻿@model SimpleInterest.Models.SimpleInterestModel
+
+@{ 
+    ViewBag.Title = "Simple Interest Calculator";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Or set to `null` if no layout
+}
+
+<h2>Simple Interest Calculator</h2>
+
+@using (Html.BeginForm("CalculateSimpleInterest", "SimpleInterest", FormMethod.Post))//It will genearte this html <form action="/SimpleInterest/CalculateSimpleInterest" method="post"> where SimpleInterest is controller name & CalculateSimpleInterest
+
+{
+                <div>
+                    <label for="Principal">Principal Amount:</label>
+                    @Html.TextBoxFor(m => m.Principal, new { @class = "form-control", placeholder = "Enter Principal Amount" })
+                    @Html.ValidationMessageFor(m => m.Principal, "", new { @class = "text-danger" })
+                    @*<input type="text" name="Principal" id="Principal" min=0/>*@
+                </div>
+                <div>
+                    <label for="Amount">Rate: </label>
+                    @Html.TextBoxFor(m => m.Amount, new { @class = "form-control", placeholder = "Enter rate Amount" })
+                    @Html.ValidationMessageFor(m => m.Amount, "", new { @class = "text-danger" })
+                </div>
+                <div>
+                    <label for="Year">Time:</label>
+                    @Html.TextBoxFor(m => m.Year, new { @class = "form-control", placeholder = "Enter time period" })
+                    @Html.ValidationMessageFor(m => m.Amount, "", new { @class = "text-danger" })
+                </div>
+                <div>
+                    <button type="submit" class= "btn btn-primary">Submit</button>
+                </div>
+
+                if (Model.SimpleInterest > 0)
+                {
+                    <h3>Result:</h3>
+                    <p>Simple Interest: <strong>@Model.SimpleInterest</strong></p>
+                }
+}
