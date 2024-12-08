@@ -20,6 +20,14 @@ In an MVC project, using Html.BeginForm is the preferred practice for forms beca
 Ques. What @ refers?
 Sol-> For Accessing the C# code inside view we use it.
 
+@Ques. Why we use @using inside Razor View(.cshtml file)?
+Sol->
+Key Takeaway
+@using is not the reason you can use Html helpers in Razor views—they are available by default. Instead, @using is for:
+
+Managing namespaces.
+Creating scoped disposable blocks like Html.BeginForm.
+
 
 
 
